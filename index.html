@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AniYu - Stream Anime, Read Manga & Connect</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
@@ -17,8 +19,8 @@
                         brand: {
                             dark: '#0f0f13',
                             card: '#1e1e2d',
-                            orange: '#f97316', /* Bright Orange */
-                            orangeDark: '#ea580c', /* Slightly darker orange for gradients */
+                            orange: '#f97316', 
+                            orangeDark: '#ea580c',
                         }
                     }
                 }
@@ -47,22 +49,25 @@
     <div class="hero-blob"></div>
     <div class="hero-blob-2"></div>
 
-    <nav class="container mx-auto px-6 py-6 flex justify-between items-center relative z-10">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-orange to-brand-orangeDark flex items-center justify-center text-white font-bold text-xl">
-                A
+    <header class="sticky top-0 z-50 bg-[#0f0f13]/90 backdrop-blur-md border-b border-gray-800/50 transition-all">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="flex items-center transition hover:opacity-80 shrink-0">
+                <img src="assets/logo.png" alt="AniYu Logo" class="h-10 md:h-12 w-auto object-contain">
+            </a>
+            
+            <div class="hidden lg:flex gap-6 font-semibold text-sm xl:text-base">
+                <a href="#home" class="scroll-link text-brand-orange transition">Home</a>
+                <a href="#features" class="scroll-link text-gray-300 hover:text-white transition">Features</a>
+                <a href="#feed" class="scroll-link text-gray-300 hover:text-white transition">Community Feed</a>
+                <a href="privacy.html" class="text-gray-300 hover:text-white transition">Privacy Policy</a>
+                <a href="terms.html" class="text-gray-300 hover:text-white transition">Terms & Conditions</a>
             </div>
-            <span class="text-2xl font-black tracking-wider">AniYu</span>
-        </div>
-        <div class="hidden md:flex gap-8 font-semibold text-gray-300">
-            <a href="#home" class="hover:text-white transition">Home</a>
-            <a href="#features" class="hover:text-white transition">Features</a>
-            <a href="#feed" class="hover:text-white transition">Community Feed</a>
-        </div>
-        <a href="#download" class="bg-white text-brand-dark px-6 py-2 rounded-full font-bold hover:bg-gray-200 transition shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-            Get App
-        </a>
-    </nav>
+
+            <a href="#download" class="bg-white text-brand-dark px-5 py-2 md:px-6 rounded-full font-bold hover:bg-gray-200 transition shadow-[0_0_15px_rgba(255,255,255,0.3)] shrink-0">
+                Get App
+            </a>
+        </nav>
+    </header>
 
     <section id="home" class="container mx-auto px-6 pt-20 pb-32 flex flex-col-reverse md:flex-row items-center relative z-10 gap-10">
         <div class="md:w-1/2 text-center md:text-left">
@@ -88,12 +93,9 @@
         </div>
 
         <div class="md:w-1/2 flex justify-center relative w-full">
-            <div class="relative w-64 max-w-full h-[500px] bg-brand-card rounded-[3rem] border-[8px] border-gray-800 shadow-2xl overflow-hidden z-10">
-                <div class="w-full h-full bg-[#0f0f13] flex flex-col items-center justify-center text-gray-500 p-6 text-center border-2 border-dashed border-gray-700 m-2 rounded-2xl">
-                    <i class="fa-solid fa-mobile-screen text-4xl mb-3 text-brand-orange"></i>
-                    <p>Place your <b>App Home Screen</b> image here.</p>
-                </div>
-                </div>
+            <div class="relative w-[280px] max-w-full h-[580px] bg-brand-card rounded-[3rem] border-[8px] border-gray-800 shadow-2xl overflow-hidden z-10">
+                <img src="assets/Home.jpg" alt="AniYu App Home Screen" class="w-full h-full object-cover">
+            </div>
             <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-brand-orange rounded-full filter blur-[80px] opacity-30 z-0"></div>
         </div>
     </section>
@@ -132,15 +134,11 @@
     </section>
 
     <section id="feed" class="container mx-auto px-6 py-24 flex flex-col md:flex-row items-center gap-12 relative z-10">
-        <div class="md:w-1/2 flex justify-center w-full">
-            <div class="w-[280px] max-w-full h-[580px] bg-brand-card rounded-[3rem] border-[8px] border-gray-800 shadow-[0_0_40px_rgba(249,115,22,0.2)] flex flex-col items-center justify-center text-gray-500 p-6 text-center border-dashed m-2 overflow-hidden relative">
-                <i class="fa-solid fa-heart absolute top-20 left-10 text-brand-orange opacity-20 text-3xl animate-pulse"></i>
-                <i class="fa-solid fa-comment absolute bottom-32 right-10 text-brand-orange opacity-20 text-3xl animate-bounce"></i>
-                
-                <i class="fa-solid fa-layer-group text-4xl mb-3 text-brand-orange"></i>
-                <p>Place your <b>Community Feed Screen</b> image here.</p>
-            </div>
-            </div>
+        <div class="md:w-1/2 flex justify-center w-full relative">
+            <img src="assets/Community.jpg" alt="Community Feed Screen" class="w-[280px] max-w-full h-[580px] rounded-[3rem] border-[8px] border-gray-800 object-cover shadow-[0_0_40px_rgba(249,115,22,0.2)] relative z-10">
+            <i class="fa-solid fa-heart absolute top-20 left-10 md:left-20 text-brand-orange opacity-30 text-4xl animate-pulse z-0"></i>
+            <i class="fa-solid fa-comment absolute bottom-32 right-10 md:right-20 text-brand-orange opacity-30 text-4xl animate-bounce z-0"></i>
+        </div>
         <div class="md:w-1/2 text-center md:text-left">
             <div class="inline-block bg-brand-orange/20 text-brand-orange font-bold px-3 py-1 rounded-md text-sm mb-4 tracking-widest uppercase">
                 Our Secret Gem
@@ -207,20 +205,43 @@
             </div>
 
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-orange to-brand-orangeDark flex items-center justify-center text-white font-bold text-sm">
-                        A
-                    </div>
-                    <span class="font-bold tracking-wider">AniYu</span>
-                </div>
+                <a href="#home" class="flex items-center transition hover:opacity-80">
+                    <img src="assets/logo.png" alt="AniYu Logo" class="h-10 md:h-12 w-auto object-contain">
+                </a>
                 <p class="text-gray-500 text-sm">© 2026 AniYu. All rights reserved.</p>
                 <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
-                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.scroll-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    // Adjusted offset so it highlights before you fully hit the top
+                    if (scrollY >= sectionTop - 200) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-brand-orange');
+                    link.classList.add('text-gray-300', 'hover:text-white');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('text-brand-orange');
+                        link.classList.remove('text-gray-300', 'hover:text-white');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
