@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "aniyu-b841b"
+  },
+  "targets": {
+    "aniyu-b841b": {
+      "hosting": {
+        "landing": [
+          "aniyu-landing-page"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
